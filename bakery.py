@@ -33,7 +33,7 @@ print ("your password is accepted")
 
 while self_checkout != "done":
     if switch == 0:
-        self_checkout = input("dear customer enter your bread: ")
+        self_checkout = input(f"dear {name} enter your bread: ")
     else:
         self_checkout = input("please enter your next item")
     while self_checkout not in dict(breads):
@@ -42,7 +42,7 @@ while self_checkout != "done":
         self_checkout = input("please enter exsisting bread: ")
     if self_checkout == "done":
         break
-    customer = int (input(f"how many {self_checkout} did you ger? "))
+    customer = int (input(f"how many {self_checkout} did you get? "))
 
     if self_checkout == "barbari":
         total_1 = breads["barbari"] * customer + total_1
@@ -70,4 +70,6 @@ while self_checkout != "done":
     switch=1
 
 print (f"so your total is {total}")
+
+input()
 #the end
